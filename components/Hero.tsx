@@ -19,13 +19,13 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center p-8 max-w-4xl mx-auto">
-        {/* Slogan: Unified font (font-display), Bigger, No Italic */}
-        <p className="font-display text-2xl md:text-4xl text-slate-700 mb-6 tracking-widest uppercase drop-shadow-sm">
-          The permanence of memory. The fluidity of dreams.
+        {/* Slogan: Unified font (font-display), Bigger, No Italic, Uppercase */}
+        <p className="font-display text-3xl md:text-5xl text-slate-700 mb-8 tracking-widest uppercase drop-shadow-sm not-italic">
+          The permanence of memory<br />The fluidity of dreams
         </p>
         
-        {/* Name: Smaller */}
-        <h1 className="font-display text-5xl md:text-7xl text-vangogh-blue mb-8 leading-tight drop-shadow-sm">
+        {/* Name: Smaller relative to before */}
+        <h1 className="font-display text-4xl md:text-6xl text-vangogh-blue mb-8 leading-tight drop-shadow-sm">
           HAN MENG
         </h1>
         

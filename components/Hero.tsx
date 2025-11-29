@@ -19,23 +19,23 @@ const Hero: React.FC = () => {
 
       {/* Content */}
       <div className="relative z-10 text-center p-8 max-w-6xl mx-auto flex flex-col items-center">
-        {/* Slogan: Adjusted to be big but not huge (5xl instead of 7xl) */}
-        <p className="font-display text-4xl md:text-5xl text-vangogh-blue mb-4 tracking-wider uppercase drop-shadow-sm leading-tight">
+        {/* Slogan: Unified Font (Cinzel), Uppercase, Non-Italic. Size adjusted to be "Big but not Too Big" */}
+        <p className="font-display text-3xl md:text-5xl text-vangogh-blue mb-4 tracking-wider uppercase drop-shadow-sm leading-tight">
           The permanence <br/> of memory
         </p>
-        <p className="font-display text-3xl md:text-4xl text-slate-600 mb-10 tracking-wider uppercase drop-shadow-sm leading-tight opacity-80">
+        <p className="font-display text-2xl md:text-4xl text-slate-600 mb-10 tracking-wider uppercase drop-shadow-sm leading-tight opacity-80">
           The fluidity <br/> of dreams
         </p>
         
         <div className="h-px w-24 bg-vangogh-gold mb-8"></div>
 
-        {/* Name: Small and subtle */}
-        <h1 className="font-display text-lg md:text-xl text-slate-800 tracking-[0.3em] uppercase opacity-90">
+        {/* Name: Much smaller now, acting as a signature */}
+        <h1 className="font-display text-sm md:text-base text-slate-800 tracking-[0.4em] uppercase opacity-70">
           Han Meng
         </h1>
         
         {/* Categories */}
-        <div className="mt-4 flex justify-center gap-4 font-sans text-[10px] md:text-xs tracking-[0.2em] text-slate-500 uppercase">
+        <div className="mt-6 flex justify-center gap-4 font-sans text-[10px] md:text-xs tracking-[0.2em] text-slate-500 uppercase">
           <span>Tattoo</span>
           <span>•</span>
           <span>Illustration</span>

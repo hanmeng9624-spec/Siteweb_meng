@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HAN Meng | Art & Ink</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              display: ['"Cinzel"', 'serif'],
+              sans: ['"Lato"', 'sans-serif'],
+            },
+            colors: {
+              'monet-blue': '#8CA6D3',
+              'monet-lilac': '#B8A4C9',
+              'monet-green': '#A8C69F',
+              'monet-yellow': '#F4E6A3',
+              'vangogh-gold': '#D9B54A',
+              'vangogh-blue': '#2C4C75',
+              'cream': '#F9F7F2',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'breathe': 'breathe 8s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              breathe: {
+                '0%, 100%': { backgroundSize: '100% 100%' },
+                '50%': { backgroundSize: '110% 110%' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar for artistic feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F9F7F2;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8CA6D3;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #2C4C75;
+      }
+      .surreal-clip {
+        clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+      }
+      .blur-edge {
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-cream text-slate-800 antialiased overflow-x-hidden selection:bg-monet-lilac selection:text-white">
+    <div id="root"></div>
+  </body>
+</html>

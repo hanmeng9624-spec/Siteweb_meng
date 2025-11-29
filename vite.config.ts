@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   define: {
-    // This allows process.env.API_KEY to work in the client-side build
-    'process.env': process.env
+    // Safely define process.env to an empty object to prevent "process is not defined" errors in browser
+    'process.env': {} 
   }
 });

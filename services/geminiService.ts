@@ -1,12 +1,19 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-// Initialize safe AI instance (handling case where env might be missing gracefully in UI)
+// In Vite, use import.meta.env.VITE_API_KEY if available, or fall back safely.
+// Note: You must add VITE_API_KEY to your Vercel Environment Variables.
+const apiKey = import.meta.env?.VITE_API_KEY || '';
+
+// Initialize safe AI instance
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 export const generateCreativeConcept = async (userIdea: string): Promise<string> => {
   if (!ai) {
-    throw new Error("API Key not configured. Unable to access Creative Assistant.");
+    // Return a mock response if no API key is set, to prevent app crashing for visitors
+    console.warn("API Key not configured. Returning mock response.");
+    return new Promise(resolve => setTimeout(() => {
+        resolve("The muse whispers of a design where reality bends... (Please configure VITE_API_KEY in Vercel to activate real AI generation).");
+    }, 1500));
   }
 
   try {

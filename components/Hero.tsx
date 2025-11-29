@@ -18,19 +18,24 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-monet-lilac rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-float" style={{ animationDelay: '4s' }}></div>
 
       {/* Content */}
-      <div className="relative z-10 text-center p-8 max-w-4xl mx-auto">
-        {/* Slogan: Unified font (font-display), Bigger, No Italic, Uppercase */}
-        <p className="font-display text-3xl md:text-5xl text-slate-700 mb-8 tracking-widest uppercase drop-shadow-sm not-italic">
-          The permanence of memory<br />The fluidity of dreams
+      <div className="relative z-10 text-center p-8 max-w-6xl mx-auto flex flex-col items-center">
+        {/* Slogan: Huge, Uppercase, Non-italic, Unified Font */}
+        <p className="font-display text-5xl md:text-7xl text-vangogh-blue mb-6 tracking-wider uppercase drop-shadow-sm leading-tight">
+          The permanence <br/> of memory
+        </p>
+        <p className="font-display text-4xl md:text-6xl text-slate-600 mb-12 tracking-wider uppercase drop-shadow-sm leading-tight opacity-80">
+          The fluidity <br/> of dreams
         </p>
         
-        {/* Name: Smaller relative to before */}
-        <h1 className="font-display text-4xl md:text-6xl text-vangogh-blue mb-8 leading-tight drop-shadow-sm">
-          HAN MENG
+        <div className="h-px w-32 bg-vangogh-gold mb-8"></div>
+
+        {/* Name: Small, subtle, acting as a signature */}
+        <h1 className="font-display text-xl md:text-2xl text-slate-800 tracking-[0.3em] uppercase opacity-90">
+          Han Meng
         </h1>
         
-        <div className="h-px w-24 bg-vangogh-gold mx-auto mb-8"></div>
-        <div className="flex justify-center gap-8 font-sans text-sm tracking-[0.2em] text-slate-700 uppercase">
+        {/* Categories */}
+        <div className="mt-4 flex justify-center gap-4 font-sans text-xs tracking-[0.2em] text-slate-500 uppercase">
           <span>Tattoo</span>
           <span>•</span>
           <span>Illustration</span>
